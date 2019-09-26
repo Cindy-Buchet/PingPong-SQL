@@ -30,3 +30,18 @@ h2{
 img{
   width: 200px;
 }
+
+.accueil{
+  background-color: url(./img/tennisdetable.jpg);
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+}
+
+.accueil-form{
+  margin-top: 50px;
+}
+
+h1{
+  color: red;
+}
