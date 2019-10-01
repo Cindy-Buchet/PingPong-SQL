@@ -4,26 +4,109 @@ body, html {
   height: 100%;
 }
 .accueil{
-    background: url(../img/table.jpg)  no-repeat center center fixed;
-    background-size: cover;
-    margin:0;
+  background-image: linear-gradient(to left bottom, #000000, #060606, #0c0c0c, #111111, #151515);
+  background-position: center center;
+  background-size: cover;
+  margin:0;
   padding:0;
-	height: 100%;
-	width: 100%;
-	display: block;
-  }
+  height: 100%;
+  width: 100%;
+  display: block;
+}
 
-  .accueil li{
-    width: 50%;
-    text-align: center;
-    text-transform: uppercase;
-  }
 h1{
+  color: white;
+  padding-top: 20px;
+}
+
+h1, h2{
   text-align: center;
 }
-  
-  .tab-content{
-    background: rgba(0, 0, 0, 0.9); 
-    padding: 10px;
-    color: white;
+.erreur{
+  color: rgb(216, 142, 142);
+  font-weight: bold;
+}
+
+.accueil li{
+  width: 50%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 640px) {
+  .accueil-form{
+    width: 90%;
+    display: block;
+    margin: auto;
   }
+}
+  
+.accueil-form{
+  padding: 20px;
+  color: white;
+  margin-top: 40px;
+  color: white !important;
+}
+
+.accueil-form-g{
+  background:rgb(83, 74, 255, 0.9); 
+}
+
+.accueil-form-d{
+  background: rgb(41, 34, 179, 0.9); 
+}
+
+
+label {
+  position: relative;
+  top: 3px;
+  font-weight: bold;
+}
+
+input[type="text"]:focus
+  {
+  border: none !important;
+  }
+
+.form-group{
+  width: 100%;
+  height: 85px;
+  overflow: hidden;
+  position: relative;
+}
+
+input[type=text], input[type=password] {
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+  display: block;
+  width: 100%;
+  border-radius: 0;
+  color: white;
+  border: none;
+  background: none !important;
+   border-bottom: 2px solid white;
+   background-color: transparent;
+  }
+  input[type=text]:focus , input[type=password]:focus {
+    box-shadow: none;
+    border-bottom: 2px solid grey  !important;
+    color: white !important;
+  }
+  input[type=text]::placeholder , input[type=password]::placeholder {
+    color: rgb(226, 226, 226) !important;
+  }
+
+    input[type=submit]{
+      background-color: #FFDF2F;
+      border-radius: 5px;
+      border: none;
+      text-align: center;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      display: block;
+      margin: auto;
+    }
+    input[type=submit]:hover{
+      opacity: 0.8;
+    }

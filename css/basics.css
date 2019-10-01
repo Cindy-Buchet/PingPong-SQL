@@ -1,8 +1,155 @@
-label, select, input{
-  width: 150px;
-  display: inline-block;
-  margin: 5px 0;
+body, html {
+  margin: 0;
+  width: 100%;
+  height: 100%;
 }
+.accueil-fond{
+  background-image: url(../img/tabletennis.jpg);
+  filter: blur(5px);
+  background-position: center center;
+  background-size: cover;
+  transform:scale(1.05);
+  margin:0;
+  padding:0;
+  height: 100%;
+  z-index: -2;
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: block;
+}
+
+h1{
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+h1, h2{
+  text-align: center;
+}
+nav{
+  color: white !important;
+}
+nav li a, .navbar-brand {
+  color: white !important;
+}
+nav a:hover{
+  color: grey !important;
+}
+.erreur{
+  color: rgb(216, 142, 142);
+  font-weight: bold;
+}
+
+.form-inline{
+  display: block !important;
+}
+
+.form-inline p{
+  margin-bottom: 0;
+}
+
+.form-inline a{
+  color: rgb(30, 18, 100);
+}
+.deco{
+  color: #BA3232 !important;
+  font-weight: bold;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+.accueil li{
+  width: 50%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 640px) {
+  .accueil-form{
+    width: 90%;
+    display: block;
+    margin: auto;
+  }
+}
+  
+.accueil-form{
+  padding: 20px;
+  color: white;
+  margin-top: 40px;
+  color: white !important;
+}
+
+.accueil-form-g{
+  background:rgb(83, 74, 255, 0.9); 
+}
+
+.accueil-form-d{
+  background: rgb(41, 34, 179, 0.9); 
+}
+
+
+label {
+  position: relative;
+  top: 3px;
+  font-weight: bold;
+}
+
+input[type="text"]:focus {
+  border: none !important;
+}
+
+.form-group{
+  width: 100%;
+  height: 85px;
+  overflow: hidden;
+  position: relative;
+}
+
+input[type=text], input[type=password], input[type=number] {
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+  display: block;
+  width: 100%;
+  border-radius: 0;
+  color: white;
+  border: none;
+  background: none !important;
+   border-bottom: 2px solid white;
+   background-color: transparent;
+}
+
+input[type=text]:focus , input[type=password]:focus {
+  box-shadow: none;
+  border-bottom: 2px solid grey  !important;
+  color: white !important;
+}
+
+input[type=text]::placeholder , input[type=password]::placeholder {
+  color: rgb(226, 226, 226) !important;
+}
+
+    input[type=submit]{
+      background-color: #B42626;
+      border-radius: 5px;
+      border: none;
+      text-align: center;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      display: block;
+      color: white;
+      margin: auto;
+    }
+    input[type=submit]:hover{
+      opacity: 0.8;
+    }
+    
+  
 table, th, td {
   border: 1px solid black;
 }
@@ -30,18 +177,116 @@ h2{
 img{
   width: 200px;
 }
-
-.accueil{
-  background-color: url(./img/tennisdetable.jpg);
-  background-size: cover;
-  background-position: center center;
+h1{
   text-align: center;
 }
 
-.accueil-form{
-  margin-top: 50px;
+/* ------------- CLUB ------------- */
+.club{
+  background-color: #F8F4F4;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.75);
+  padding: 0;
+}
+.club img{
+  width: 100%;
+  height: 150px;
+
+}
+.club .nom{
+  font-weight: bold;
+}
+.club .rue{
+  margin-bottom: 0;
+}
+.club .ville{
+  margin-left: 20px;
 }
 
-h1{
-  color: red;
+.club a{
+  border-radius: 5px;
+  border: 2px solid #BA3232;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 5px ;
+  display: block;
+  margin: auto;
+  color: #BA3232;
+  margin-bottom: 8px;
+  width: 45%;
+}
+.club a:hover{
+  text-decoration: none;
+  background-color: rgba(185, 185, 185, 0.7) !important;
+}
+
+.club .card-footer{
+  display: inline-flex;
+}
+
+/* ------------- FOND ------------- */
+.fond{
+  background-image: linear-gradient(to right top, #051937, #102f54, #1a4673, #225f93, #267ab4);  background-position: center center;
+  background-size: cover;
+  margin:0;
+  padding:0;
+  height: 100%;
+  z-index: -2;
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: block;
+}
+
+/* ------------- CREATE ------------- */
+.create-form div{
+  display: grid;
+  grid-template-columns: 45% 45%;
+}
+
+.create-form label{
+  grid-column: 1;
+}
+.create-form input{
+  grid-column: 2;
+}
+
+.create input{
+  display: inline-block;
+  margin: 5px 0;
+}
+
+.create{
+  background-color: rgb(83, 74, 255, 0.9);
+  color: white;
+  padding-top: 20px;
+}
+
+
+.img-create{
+  background-image: url(../img/createfond.jpg);
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+  z-index: -2;
+}
+.create-padding{
+  padding-top: 40px;
+}
+
+/* ------------- UPDATE ------------- */
+.img-update{
+  background-image: url(../img/update.jpg);
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 530px;
+  z-index: -2;
+}
+
+.update-padding{
+  padding-top: 40px;
+  margin-bottom: 30px;
 }

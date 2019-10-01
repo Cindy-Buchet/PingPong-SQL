@@ -15,7 +15,7 @@
     if (isset($_POST['connexion'])){
 
       $login = $_POST['login'];
-      $pwd = $_POST['pwd'];
+      $pwd = sha1($_POST['pwd']);
         
       if (isset($_POST['login']) && isset($_POST['pwd'])) {
         
@@ -54,12 +54,16 @@
     function checkInfo() {
       return !empty($_POST['new_login']) && !empty($_POST['new_pwd']);
     }
+
     // Si il a cliqué sur inscription
     if (isset($_POST['inscription'])){
+      if ($_POST['new_pwd'] != $_POST['new_pwd2']){
+        $_SESSION['inscri'] = "Veuillez confirmer le bon mot de passe";
+      }
 
-      if (checkInfo()) {
+      else if (checkInfo()) {
         $new_login = $_POST['new_login'];
-        $new_pwd = $_POST['new_pwd'];
+        $new_pwd = sha1($_POST['new_pwd']);
 
         $prepa = $bdd->prepare('INSERT INTO users (pseudo, pwd) VALUES (:pseudo, :pwd)');
         
@@ -77,7 +81,7 @@
         $_SESSION['inscri'] = "C'est râté";
       }
       
-      header ('location: index.php#inscription-tab');
+      header ('location: index.php');
 
     }
     ?>
